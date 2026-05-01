@@ -1,5 +1,7 @@
 package session.manage;
 //managing session using cookies and http session
+import jakarta.servlet.ServletConfig;
+import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;
@@ -7,7 +9,7 @@ import jakarta.servlet.http.*;
 import java.io.IOException;
 import java.util.UUID;
 
-@WebServlet("/servlet1")
+//@WebServlet("/servlet1")  //before adding to .xml
 public class Request1Servlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -24,6 +26,21 @@ public class Request1Servlet extends HttpServlet {
         resp.addCookie(cookie);
 
         writer.println("<h1>Username: %s".formatted(username));
+
+        //fetching parameters from .xml
+        ServletConfig servletConfig = getServletConfig();
+        ServletContext servletContext= servletConfig.getServletContext();
+        //get context and config data
+        String appName =servletContext.getInitParameter("app_name");
+        String userName= servletConfig.getInitParameter("userName");
+        //print
+        resp.getWriter().println(
+                """
+                <h1>Servlet Context Param : %s</h1>
+                <h1>Init Params: %s</h1>
+                """.formatted(appName, userName)
+        );
+
 
         //http session
         HttpSession session = req.getSession();  //we get a session obj
