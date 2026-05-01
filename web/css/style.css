@@ -5,6 +5,7 @@ body {
 
 .content_container {
     height: calc(100vh - 56px);
+    gap: 16px;
 }
 
 /* Feedback button */
@@ -38,7 +39,7 @@ body {
     font-size: 0.85rem;
     background: transparent;
     color: #fff;
-    width: 330px;              /* fixed width keeps it compact */
+    width: 330px;
 }
 
 .form-control:focus {
@@ -76,7 +77,7 @@ body {
     margin-left: 6px;
     padding: 4px 14px;
     font-size: 0.85rem;
-    line-height: 1.5;          /* matches nav-link line-height */
+    line-height: 1.5;
     background: transparent;
     color: #fff;
     white-space: nowrap;
@@ -101,5 +102,5 @@ body {
     border-radius: 12px;
     padding: 2rem;
     width: 100%;
-    max-width: 420px;          /* keeps form compact and centered */
+    max-width: 420px;
 }

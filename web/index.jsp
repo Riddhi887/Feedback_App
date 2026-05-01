@@ -10,8 +10,10 @@
 <%@include file="components/header.jsp"%>
 
 <!-- Full-height container minus navbar, centers the button vertically -->
-<div class="content_container d-flex justify-content-center align-items-center">
+<div class="content_container d-flex justify-content-center align-items-center gap-3">
     <a href="<%= application.getContextPath()%>/feedback.jsp" class="feedback_btn">Give us Feedback</a>
+    <a href="<%= application.getContextPath()%>/servlet1" class="feedback_btn">Go to Servlet 1</a>
+    <a href="<%= application.getContextPath()%>/servlet2" class="feedback_btn">Go to Servlet 2</a>
 </div>
 
 <%@include file="components/scripts.jsp"%>
