@@ -15,7 +15,8 @@
     <h4 class="text-white mb-3">Fill the Feedback Form</h4>
 
     <!-- Form card wrapper for clean look -->
-    <form class="feedback_form text-white ">
+    <!-- Action? ::Servlet-->
+    <form action="<%= application.getContextPath()%>/feedback" method="post" class="feedback_form text-white ">
 
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Email address</label>
@@ -25,18 +26,21 @@
 
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Phone Number</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Eg: 876342109">
+            <input name="phone" type="text" class="form-control" id="exampleInputPassword1" placeholder="Eg: 876342109">
         </div>
 
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Your Feedback</label>
             <label>
-                <textarea rows="10" cols="" placeholder="Enter your feedback message" class="form-control"></textarea>
+                <textarea name="feedback_message" rows="10" cols="" placeholder="Enter your feedback message" class="form-control"></textarea>
             </label>
         </div>
 
+        <div class="container text-center">
+            <button type="submit" class="btn btn-warning">Submit</button>
+            <button type="reset" class="btn btn-light">Reset</button>
 
-        <button type="submit" class="btn btn-primary w-100">Submit</button>
+        </div>
 
     </form>
 </div>
