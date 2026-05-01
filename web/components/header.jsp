@@ -42,7 +42,7 @@
                        type="search"
                        placeholder="Search"
                        aria-label="Search"/>
-                <button class="btn btn-outline-success" type="submit">Search</button>
+                <button class="btn-search btn-outline-success" type="submit">Search</button>
             </form>
         </div>
     </div>

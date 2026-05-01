@@ -11,7 +11,7 @@
 
 <!-- Full-height container minus navbar, centers the button vertically -->
 <div class="content_container d-flex justify-content-center align-items-center">
-    <button class="feedback_btn">Give us Feedback</button>
+    <a href="<%= application.getContextPath()%>/feedback.jsp" class="feedback_btn">Give us Feedback</a>
 </div>
 
 <%@include file="components/scripts.jsp"%>
